@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1759173241980,
+    "text": "Сделать яичницу",
+    "completed": false,
+    "createdAt": "2025-09-29T19:14:01.980Z",
+    "completedAt": null
+  },
+  {
+    "id": 1759176324629,
+    "text": "Сделать яичницу",
+    "completed": true,
+    "createdAt": "2025-09-29T20:05:24.629Z",
+    "completedAt": "2025-09-29T20:46:50.907Z"
+  }
+]
