@@ -12,7 +12,7 @@ async function addTask(text) {
   };
   tasks.push(newTask);
   await saveTasks(tasks);
-  console.log("Добавлено:", newTask.id, "-", newTask.text);
+  console.log("Added:", newTask.id, "-", newTask.text);
 }
 
 async function listTasks() {
@@ -24,13 +24,13 @@ async function toggleDone(id) {
   const tasks = await loadTasks();
   const idx = tasks.findIndex(t => String(t.id) === String(id));
   if (idx === -1) {
-    console.log("Задача не найдена:", id);
+    console.log("Task not found:", id);
     return;
   }
   tasks[idx].completed = !tasks[idx].completed;
   tasks[idx].completedAt = tasks[idx].completed ? new Date().toISOString() : null;
   await saveTasks(tasks);
-  console.log(`Задача ${tasks[idx].completed ? "выполнена" : "возвращена в активные"}:`, tasks[idx].id);
+  console.log(`Task ${tasks[idx].completed ? "complete" : "returned to active"}:`, tasks[idx].id);
 }
 
 async function deleteTask(id) {
@@ -38,11 +38,11 @@ async function deleteTask(id) {
   const before = tasks.length;
   tasks = tasks.filter(t => String(t.id) !== String(id));
   if (tasks.length === before) {
-    console.log("Задача не найдена:", id);
+    console.log("Task not found:", id);
     return;
   }
   await saveTasks(tasks);
-  console.log("Удалено:", id);
+  console.log("Deleted:", id);
 }
 
 async function clearCompleted() {
@@ -50,7 +50,7 @@ async function clearCompleted() {
   const before = tasks.length;
   tasks = tasks.filter(t => !t.completed);
   await saveTasks(tasks);
-  console.log("Очищено выполненных:", before - tasks.length);
+  console.log("Cleared completed:", before - tasks.length);
 }
 
 async function stats() {
@@ -62,7 +62,7 @@ async function stats() {
     .filter(t => t.completed && t.completedAt)
     .map(t => new Date(t.completedAt) - new Date(t.createdAt));
   const avgMs = diffs.length ? Math.round(diffs.reduce((a,b)=>a+b,0) / diffs.length) : 0;
-  view.printStats(total, completed, active, view.durationMsToHuman(avgMs));
+  view.printStats(total, completed, active, view.durationMs(avgMs));
 }
 
 module.exports = {

@@ -3,7 +3,7 @@ function formatDate(iso) {
   return new Date(iso).toLocaleString();
 }
 
-function durationMsToHuman(ms) {
+function durationMs(ms) {
   if (!Number.isFinite(ms) || ms < 0) return "0m";
   const days = Math.floor(ms / (24*3600*1000));
   ms %= 24*3600*1000;
@@ -19,23 +19,23 @@ function durationMsToHuman(ms) {
 
 function printTasks(tasks) {
   if (!tasks.length) {
-    console.log("Список пуст.");
+    console.log("The list is empty.");
     return;
   }
   console.log("=== ToDo ===");
   for (const t of tasks) {
     console.log(
-      `${t.completed ? "[x]" : "[ ]"} ${t.id} — ${t.text}\n    created: ${formatDate(t.createdAt)}${t.completed ? `; done: ${formatDate(t.completedAt)}; took: ${durationMsToHuman(new Date(t.completedAt) - new Date(t.createdAt))}` : ""}`
+      `${t.completed ? "[x]" : "[ ]"} ${t.id} — ${t.text}\n    created: ${formatDate(t.createdAt)}${t.completed ? `; done: ${formatDate(t.completedAt)}; took: ${durationMs(new Date(t.completedAt) - new Date(t.createdAt))}` : ""}`
     );
   }
 }
 
 function printStats(total, completed, active, avgTime) {
-  console.log("Статистика:");
-  console.log("  Всего:", total);
-  console.log("  Выполнено:", completed);
-  console.log("  Активных:", active);
-  console.log("  Среднее время выполнения:", avgTime);
+  console.log("Statistics:");
+  console.log("Total:", total);
+  console.log("Done:", completed);
+  console.log("Active:", active);
+  console.log("Average completion time:", avgTime);
 }
 
 module.exports = {
