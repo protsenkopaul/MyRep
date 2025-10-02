@@ -17,29 +17,4 @@ function durationMs(ms) {
   return parts.join(" ");
 }
 
-function printTasks(tasks) {
-  if (!tasks.length) {
-    console.log("The list is empty.");
-    return;
-  }
-  console.log("=== ToDo ===");
-  for (const t of tasks) {
-    console.log(
-      `${t.completed ? "[x]" : "[ ]"} ${t.id} — ${t.text}\n    created: ${formatDate(t.createdAt)}${t.completed ? `; done: ${formatDate(t.completedAt)}; took: ${durationMs(new Date(t.completedAt) - new Date(t.createdAt))}` : ""}`
-    );
-  }
-}
-
-function printStats(total, completed, active, avgTime) {
-  console.log("Statistics:");
-  console.log("Total:", total);
-  console.log("Done:", completed);
-  console.log("Active:", active);
-  console.log("Average completion time:", avgTime);
-}
-
-module.exports = {
-  printTasks,
-  printStats,
-  durationMsToHuman,
-};
+module.exports = { formatDate, durationMs };

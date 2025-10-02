@@ -12,5 +12,12 @@
     "completed": true,
     "createdAt": "2025-09-29T20:05:24.629Z",
     "completedAt": "2025-09-29T20:46:50.907Z"
+  },
+  {
+    "id": 1759424769390,
+    "text": "Сделать ToDo через Express",
+    "completed": false,
+    "createdAt": "2025-10-02T17:06:09.390Z",
+    "completedAt": null
   }
 ]
