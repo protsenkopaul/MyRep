@@ -1,0 +1,18 @@
+[
+  {
+    "id": "d771de7c-5dd9-43b0-9cec-e8eee463a78e",
+    "authorId": "b31705b1-7fbd-4619-a30d-f926b6b13291",
+    "title": "My First Post",
+    "content": "HTTP, Rest",
+    "createdAt": "2025-10-10T18:07:43.421Z",
+    "likes": 0
+  },
+  {
+    "id": "a96776f4-1148-4b34-b0d5-b4696e1a8117",
+    "authorId": "542cddb7-71ee-456f-8c75-568dea8650a6",
+    "title": "My First Post",
+    "content": "Hello world! This is my first post.",
+    "createdAt": "2025-10-10T18:21:34.543Z",
+    "likes": 0
+  }
+]

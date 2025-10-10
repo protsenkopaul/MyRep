@@ -1,0 +1,1 @@
+{"version":3,"file":"authorController.d.ts","sourceRoot":"","sources":["../../src/controllers/authorController.ts"],"names":[],"mappings":"AACA,OAAO,KAAK,EAAE,MAAM,EAAE,MAAM,qBAAqB,CAAC;AAKlD,wBAAsB,YAAY,CAAC,IAAI,EAAE,MAAM,EAAE,GAAG,CAAC,EAAE,MAAM,GAAG,OAAO,CAAC,MAAM,CAAC,CAY9E;AAED,wBAAsB,YAAY,CAAC,UAAU,EAAE,MAAM,EAAE,QAAQ,EAAE,MAAM,mBAUtE"}

@@ -1,0 +1,18 @@
+[
+  {
+    "id": "b31705b1-7fbd-4619-a30d-f926b6b13291",
+    "name": "John Doe",
+    "bio": "I write about tech.",
+    "createdAt": "2025-10-10T18:05:19.055Z",
+    "following": [
+      "542cddb7-71ee-456f-8c75-568dea8650a6"
+    ]
+  },
+  {
+    "id": "542cddb7-71ee-456f-8c75-568dea8650a6",
+    "name": "Yrec Kabannik",
+    "bio": "Guru",
+    "createdAt": "2025-10-10T18:05:56.349Z",
+    "following": []
+  }
+]
