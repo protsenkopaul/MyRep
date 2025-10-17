@@ -16,6 +16,9 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "hono": "^4.9.10"
+    "express": "^5.1.0",
+    "hono": "^4.9.10",
+    "zod": "^4.1.12",
+    "zod-express-middleware": "^1.4.0"
   }
 }

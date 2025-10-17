@@ -14,5 +14,12 @@
     "bio": "Guru",
     "createdAt": "2025-10-10T18:05:56.349Z",
     "following": []
+  },
+  {
+    "id": "81dc8d23-512b-49d2-91ec-4da077092354",
+    "name": "Ivan",
+    "bio": "Front-End",
+    "createdAt": "2025-10-17T17:05:16.287Z",
+    "following": []
   }
 ]
